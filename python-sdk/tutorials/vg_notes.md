@@ -14,6 +14,13 @@
   
 ### Input Representation
 
+Refer to map_expansion/map_api.py for how the NuScenesMap class works.  Essentially, these are the key layers:
+
+`self.non_geometric_polygon_layers = ['drivable_area', 'road_segment', 'road_block', 'lane', 'ped_crossing',
+                                             'walkway', 'stop_line', 'carpark_area']`
+
+`self.non_geometric_line_layers = ['road_divider', 'lane_divider', 'traffic_light']`
+
 #### interface.py
   * Abstract base class implementations for StaticLayerRepresentation, AgentRepresentation, Combinator
   * Class implementaiton for InputRepresentation which runs .make_representation and then .combine methods of above classes.
